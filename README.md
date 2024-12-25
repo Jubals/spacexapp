@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# SpaceX Launches App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React application built with TypeScript that fetches and displays data from the SpaceX Launches API. This app allows users to view the latest SpaceX launches with details such as mission name, launch date, rocket used, and more.
 
-Currently, two official plugins are available:
+## Features
+- Display a list of SpaceX launches.
+- Shows mission name, launch date, rocket name, and additional details.
+- Built with React and TypeScript for a modern, type-safe development experience.
+- Fetches live data from the SpaceX Launches API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that provides static typing.
+- **Bootstrap**: A popular CSS framework used for building responsive, mobile-first websites.
+- **Vite**: A fast build tool and development server.
+- **SpaceX Launches API**: Provides data about SpaceX's past and upcoming launches.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To run this application locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+### 1. Clone the Repository
+First, clone the repository to your local machine:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/Jubals/spacexapp.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install Dependencies
+Navigate to the project directory:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd spacexapp
 ```
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+### 3. Build the Project
+
+To create a production build of the application, run:
+
+```bash
+npm run build
+```
+This will generate the optimized build files in the dist/ folder.
+
+### 4. Preview the Application
+
+After building the project, you can preview it locally by running the following command:
+
+```bash
+npm run preview
+```
+
+This will start a local server to preview the built application. Open your browser and navigate to the provided URL (usually http://localhost:4173).
